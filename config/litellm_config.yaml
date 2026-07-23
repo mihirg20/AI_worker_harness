@@ -1,0 +1,8 @@
+model_list:
+  - model_name: gemini-flash
+    litellm_params:
+      model: gemini/gemini-2.5-flash
+      api_key: ${GEMINI_API_KEY}
+
+general_settings:
+  master_key: my-secret-key
