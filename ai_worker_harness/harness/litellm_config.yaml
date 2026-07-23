@@ -1,0 +1,37 @@
+# model_list:
+#   - model_name: gemini-worker
+#     litellm_params:
+#       model: gemini/gemini-3-flash-preview
+#       api_key: os.environ/GEMINI_KEY_1
+
+#   - model_name: gemini-worker
+#     litellm_params:
+#       model: gemini/gemini-3-flash-preview
+#       api_key: os.environ/GEMINI_KEY_2
+
+#   - model_name: gemini-worker
+#     litellm_params:
+#       model: gemini/gemini-3-flash-preview
+#       api_key: os.environ/GEMINI_KEY_3
+
+# router_settings:
+#   routing_strategy: least-busy
+#   num_retries: 2
+#   allowed_fails: 2
+#   cooldown_time: 60
+
+# litellm_settings:
+#   drop_params: true
+
+model_list:
+  - model_name: gemini-worker
+    litellm_params:
+      model: gemini/gemini-3.5-flash-lite
+      api_key: os.environ/GEMINI_KEY_1
+
+router_settings:
+  routing_strategy: simple-shuffle
+
+litellm_settings:
+  drop_params: true
+
